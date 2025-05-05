@@ -46,8 +46,8 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
       metricId = docSnapshot.id;
     });
 
-    console.log("metricId", metricId);
-    console.log("result", result);
+    // console.log("metricId", metricId);
+    // console.log("result", result);
 
     if (Object.keys(result).length > 0 && metricId) {
       // Document exists, so update the count
