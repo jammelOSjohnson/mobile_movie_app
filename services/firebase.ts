@@ -80,7 +80,7 @@ export const getTrendingMovies = async (): Promise<
 > => {
   try {
     const metricsRef = Collection(db, "metrics");
-    const q = Query(metricsRef, OrderBy("count", "desc"), Limit(5));
+    const q = Query(metricsRef, OrderBy("count", "desc"), Limit(3));
     const metricSnapshot = await GetDocs(q);
     let result: TrendingMovie[] = [];
     metricSnapshot.forEach((doc) => {
